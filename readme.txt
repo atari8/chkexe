@@ -75,6 +75,9 @@ Fixed signedness bug concerning branches :(
 10/10/1999, kubecj, 2.62
 Changed switches processing.
 
+12/28/2014, jduerstock, 2.62a
+Cleaned up compiler warnings
+Changed Makefile to build under Linux
 
 To Do:
 ------
