@@ -16,14 +16,16 @@
 #include "wintypes.h"
 #include "at_dis.h"
 
-struct
+typedef struct
 {
-	char	*instruct;
+	const char	*instruct;
 	int	length;
 	int	branch;
 	int	immed;
 	int	write;
-} instable[] =
+} instable_rec;
+
+instable_rec instable[] =
 {
 	{ "BRK",				0, 0, 1, 0 },	//00
 	{ "ORA\t(*,X)",	1, 0, 0, 0 },	//01
@@ -286,7 +288,7 @@ struct
 
 typedef struct
 {
-	char* name;
+	const char* name;
 	WORD addr;
 } symtable_rec;
 
@@ -1084,7 +1086,7 @@ void OutputBlockDiss( BYTE* pbtBlock, WORD wOffset, WORD wEnd )
 		char obuf[256];
 		char *p;
 
-		char* szSymbol = NULL;
+		const char* szSymbol = NULL;
 
 		strcpy( obuf, instable[ wInsCode ].instruct );
 
@@ -1153,7 +1155,7 @@ void OutputBlockDiss( BYTE* pbtBlock, WORD wOffset, WORD wEnd )
 
 }
 
-char* SymbolFind( WORD addr, BOOL bWrite )
+const char* SymbolFind( WORD addr, BOOL bWrite )
 {
 	int lo = 0;
 	int mi = 0;

@@ -17,11 +17,11 @@ debug:
 	@echo DEBUG: Compiled.
 
 clean:
-	@del *.o
-	@del $(PRGNAME).
-	@del $(PRGNAME).exe
-	@del switches.cpp
-	@deltree /y rel
+	@rm *.o
+	@rm $(PRGNAME)
+	@rm $(PRGNAME).exe
+	@rm switches.cpp
+	@rm -r rel
 	@echo DEBUG: Cleaned.
 
 #=====================================================================
@@ -40,8 +40,8 @@ OBJECTS =	chkexe.o		\
 		at_dis.o	
 
 #=====================================================================
-CC		= gcc
-LD		= gcc
+CC		= g++
+LD		= g++
 LDLIBS		= -lm
 
 #=====================================================================

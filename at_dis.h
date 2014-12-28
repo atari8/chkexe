@@ -19,7 +19,7 @@
 #include "wintypes.h"
 
 void OutputBlockDiss( BYTE*, WORD, WORD );
-char* SymbolFind( WORD, BOOL );
+const char* SymbolFind( WORD, BOOL );
 
 #endif
 

@@ -42,11 +42,11 @@ BOOL SWFN_HELP( char* szUsage )
 {
 	if ( szUsage )
 		printf( "%s\n", szUsage );
-	printf( "-help     -this help\n" );
-	printf( "-d        -disassembles\n" );
-	printf( "-silent   -silent operation\n" );
-	printf( "-gaps     -length of gap fill (hexadecimal)\n" );
-	printf( "-split    -split into blocks\n" );
+	printf( "-help         -this help\n" );
+	printf( "-d            -disassembles\n" );
+	printf( "-silent       -silent operation\n" );
+	printf( "-gaps hexnum  -length of gap fill (hexadecimal)\n" );
+	printf( "-split        -split into blocks\n" );
 	return FALSE;
 }
 
